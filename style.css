@@ -1,23 +1,39 @@
-/* style.css */
-div {
-  color: black;
-  background-color: white;
-  font-size: 12px;
-  font-family:'Franklin gothic medium','arial narrow bold', sans-serif
-}
-
-p {
-  color: black;
-}
-
+@import url('https://fonts.google.com/share?selection.family=Raleway:ital,wght@0,100..900;1,100..900');
 * {
-    padding: auto;
-    margin-top: 3%;
-    outline: 1px solid red;
-  }
 
-  .container .header {
-    padding: 10px;
-    margin: 10px;
-    outline: 2px solid green;
-  }
+    box-sizing: border-box ;
+    font-family: Raleway, sans-serif;
+    color: #000000
+}
+
+html , body {
+
+    padding: 0;
+    margin: 0;
+}   
+ .nav ul {
+margin: 0;
+
+   }
+
+   .nav li {
+display: inline;
+
+   }
+   
+   .mainheader {
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+    }
+
+    .nav a {
+
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+
+        
+    }
+
+    
