@@ -31,9 +31,24 @@ display: inline;
         display: inline-block;
         text-decoration: none;
         color: black;
-        padding: 10px;
+        padding: 30px;
 
         
     }
 
+    .nav a:hover {
+        background-color: rgba(247, 222, 61, 0.3);
+       
+    }
+
+    .main-nav {
+        text-align: center;
+        font-size: 1.1em;
+        font-weight: lighter;
+        border-bottom: 1px solid rgb(163, 140, 85, .3);
+    }
     
+    .main-nav li {
+
+        padding: 0 5%;
+    }
