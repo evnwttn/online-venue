@@ -1,12 +1,23 @@
 /* style.css */
 div {
-
-color: white;
-background-color: black;
+  color: black;
+  background-color: white;
+  font-size: 12px;
+  font-family:'Franklin gothic medium','arial narrow bold', sans-serif
 }
 
 p {
-
-color: red;
-
+  color: black;
 }
+
+* {
+    padding: auto;
+    margin-top: 3%;
+    outline: 1px solid red;
+  }
+
+  .container .header {
+    padding: 10px;
+    margin: 10px;
+    outline: 2px solid green;
+  }
