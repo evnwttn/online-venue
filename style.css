@@ -1,4 +1,10 @@
 @import url('https://fonts.google.com/share?selection.family=Raleway:ital,wght@0,100..900;1,100..900');
+
+@font-face {
+    font-family: "Booter - Zero Zero.woff";
+    src: url("font/Booter - Zero Zero.woff"), format("woff"),
+         url("font/Booter - Zero Zero.woff2"), format("woff2");
+}
 * {
 
     box-sizing: border-box ;
@@ -52,3 +58,14 @@ display: inline;
 
         padding: 0 5%;
     }
+
+    .main-name-large {
+
+        text-align: left;
+        margin: 0;
+        font-size: 4em;
+        font-family: "Booter - Zero Zero.woff";
+        margin: 20px;
+        font-weight: normal;
+    }
+     
