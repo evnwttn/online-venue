@@ -23,7 +23,7 @@ margin-left: -80%;
    }
 
    .nav li {
-display: inline
+display: inline;
 
    }
    
@@ -34,7 +34,7 @@ display: inline
 
     .nav a {
 
-        display: inline-block
+        display: inline-block;
         text-decoration: none;
         color: black;
         padding: 30px;
@@ -69,6 +69,11 @@ display: inline
         font-weight: normal;
     }
 
- 
+    dialog {
+        padding: 0;
+    }
 
+    dialog .wrapper {
+        padding: 16px;
+    }
      
