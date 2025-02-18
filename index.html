@@ -24,7 +24,7 @@
       <h1 class="main-name main-name-large">Online Venue Booking</h1>
     </header>
     <dialog id="lgn">
-
+        <div class="wrapper">
       <h2>Login</h2>
       <form>
         <input type="email" placeholder="email" />
@@ -280,7 +280,9 @@
             </select>
         
         <input type="submit" value="Login" />
+        <button type="button" onclick="closeLoginDialog()" >Cancel</button>
       </form>
+      </div>
     </dialog>
     
   <!--https://www.youtube.com/watch?v=t_GuuhNNcNQ-->
@@ -288,12 +290,25 @@
 
 
 const dialog = document.getElementById('lgn');
-
+const wrapper = document.querySelector('.wrapper');
 function showLoginDialog() {
   dialog.showModal();
 }
+
    </script>
 
 <!--https://www.youtube.com/watch?v=t_GuuhNNcNQ-->
+<script>
+function closeLoginDialog() {
+    dialog.close();
+}
+
+dialog.addEventListener('click', (e) => {
+    if (!wrapper.contains(e.target)) {
+        dialog.close()
+    }
+})
+console.log('Dialog closed')
+</script>
   </body>
 </html>
