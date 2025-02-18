@@ -10,7 +10,7 @@
     <header class="mainheader">
       <nav class="nav main-nav">
         <ul>
-          <button class="login" onclick="dialog.showModal()">
+          <button class="login" onclick="dialog.showModal(true)">
             User Login
           </button>
           <button
@@ -280,7 +280,7 @@
             </select>
         
         <input type="submit" value="Login" />
-        <button type="button" onclick="closeLoginDialog()" >Cancel</button>
+        <button type="button" onclick= showLoginDialog(false) >Cancel</button>
       </form>
       </div>
     </dialog>
@@ -291,23 +291,12 @@
 
 const dialog = document.getElementById('lgn');
 const wrapper = document.querySelector('.wrapper');
-function showLoginDialog() {
-  dialog.showModal();
-}
 
-   </script>
+// <!--https://www.youtube.com/watch?v=t_GuuhNNcNQ-->
 
-<!--https://www.youtube.com/watch?v=t_GuuhNNcNQ-->
-<script>
-function closeLoginDialog() {
-    dialog.close();
-}
+const showLoginDialog = (show) => show ? dialog.showModal() : dialog.close()
 
-dialog.addEventListener('click', (e) => {
-    if (!wrapper.contains(e.target)) {
-        dialog.close()
-    }
-})
+dialog.addEventListener ('click', (e) => !wrapper.contains (e.target) && dialog.close() )
 console.log('Dialog closed')
 </script>
   </body>
