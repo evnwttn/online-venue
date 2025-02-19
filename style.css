@@ -31,8 +31,13 @@ display: inline;
    }
    
    .mainheader {
-        background-color: rgb(255, 255, 255);
-        padding: 10px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    
+    width: 100%;
+    padding: 60px;
+    background: #D6E9FE;
     }
 
     .nav a {
@@ -79,4 +84,6 @@ display: inline;
     dialog .wrapper {
         padding: 16px;
     }
-     
+     a:hover {
+  text-decoration: underline;
+}
