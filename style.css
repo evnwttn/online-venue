@@ -26,18 +26,24 @@ margin-left: -80%;
    }
 
    .nav li {
-display: inline;
-
+   display: inline-flex
+    
    }
    
    .mainheader {
-    position: fixed;
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    height: 150px;
+    
     justify-content: space-between;
     
     width: 100%;
-    padding: 60px;
+    padding: 15px;
     background: #D6E9FE;
+    }
+    .mainheader h1 {
+        justify-content: flex-end;
     }
 
     .nav a {
@@ -45,7 +51,7 @@ display: inline;
         display: inline-block;
         text-decoration: none;
         color: black;
-        padding: 30px;
+        padding: 10px;
 
         
     }
@@ -59,7 +65,7 @@ display: inline;
         text-align: center;
         font-size: 1.1em;
         font-weight: lighter;
-        border-bottom: 1px solid rgb(163, 140, 85, .3);
+        /* border-bottom: 1px solid rgb(163, 140, 85, .3); */
     }
     
     .main-nav li {
