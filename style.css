@@ -26,13 +26,30 @@ margin-left: -80%;
    }
 .searchsider {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    text-align: center;
     background-color: #e7eaed;
-    padding: 10px;
+    padding: 30px;
+    width: 100%;
+    hidth: 100%;
+    border: solid rgb(0, 0, 0) 1px;
+    margin: 22px;
     border: solid rgb(0, 0, 0) 1px;
 
+}
+.src {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background-color: #e7eaed;
+    padding: 10px;
+
+    border: solid rgb(0, 0, 0) 1px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border-radius: 33px;
+    padding: 10px 10px;;
 }
 .btn {
     background-color: #000000;
@@ -45,6 +62,7 @@ margin-left: -80%;
     background-color: #000000;
     color: rgb(255, 255, 255);
     border-radius: 33px;
+    padding: 10px 20px;
 }
    .nav li {
    display: inline-flex
