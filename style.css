@@ -31,11 +31,10 @@ margin-left: -80%;
     text-align: center;
     background-color: #e7eaed;
     padding: 30px;
-    width: 100%;
-    hidth: 100%;
-    border: solid rgb(0, 0, 0) 1px;
-    margin: 22px;
-    border: solid rgb(0, 0, 0) 1px;
+    width: 88%;
+    
+   
+
 
 }
 .src {
@@ -45,7 +44,7 @@ margin-left: -80%;
     background-color: #e7eaed;
     padding: 10px;
 
-    border: solid rgb(0, 0, 0) 1px;
+    border: solid rgb(0, 0, 0) 0px;
     background-color: #000000;
     color: rgb(255, 255, 255);
     border-radius: 33px;
@@ -72,7 +71,7 @@ margin-left: -80%;
 
     display: flex;
     background: #ffffff;
-    border: solid rgb(0, 0, 0) 1px;
+    border: solid rgb(0, 0, 0) 0px;
     flex-direction: column;
     min-height: 100vh;
 
@@ -83,7 +82,7 @@ margin-left: -80%;
     flex: 0; 
     margin: -190px;
     padding: 10px;
-    border: solid rgb(0, 0, 0) 1px;
+    border: solid rgb(0, 0, 0) 0px;
 
    }
    .mainsearch {
@@ -105,7 +104,7 @@ margin-left: -80%;
     margin: 0;
     margin-top: 50px;
     padding: 0;
-    border: solid rgb(0, 0, 0) 0.3px;
+    border: solid rgb(0, 0, 0) 0.0px;
 
 
    }
@@ -121,7 +120,7 @@ margin-left: -80%;
     text-align: center;
 
     justify-content: space-between;
-    border: solid rgb(0, 0, 0) 1px;
+    border: solid rgb(0, 0, 0) 0px;
     width: 100%;
     padding: 15px;
     background: #ffffff;
