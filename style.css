@@ -109,8 +109,21 @@ margin-left: -80%;
 
    }
 
-
-   
+    #userForm {
+      
+        margin: 40px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 0px solid #ccc;
+    }
+    #userForm input {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    } 
    .mainheader {
     display: flex;
     flex-direction: row-reverse;
@@ -172,9 +185,7 @@ margin-left: -80%;
         padding: 0;
     }
 
-    dialog .wrapper {
-        padding: 16px;
-    }
+
      a:hover {
   text-decoration: underline;
 }
