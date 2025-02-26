@@ -43,28 +43,29 @@
           placeholder="Search for a venue"
           onkeyup="search()"
         />
-        <button class="btn btn-primary" onclick="showLoginDialog(true)">
-          Login
+        <button class="src vns" onclick="showLoginDialog(true)">
+         Search Venues
         </button>
     </div>
 
     <dialog id="lgn">
       <div class="wrapper">
-        <h2>Login</h2>
+        <h2>Sign Up</h2>
         <form id="userForm">
           <input type="email" id="email" placeholder="email" />
           <input type="password" id="password" placeholder="Password" />
           <input type="name" id="name" placeholder="Name" />
-          <label for="country">Country</label
-          ><span style="color: red !important; display: inline; float: none"
-            >*</span
-          >
+          <label for="country">Country</label>
+          <span style="color: red !important; display: inline; float: none"
+            >*</span>
           <!-- https://gist.github.com/danrovito/977bcb97c9c2dfd3398a -->
           <select id="country" name="country" class="form-control">
             <option value="" disabled selected>Select your country</option>
           </select>
-
-          <input type="submit" value="Login" />
+          <input type="checkbox" id="Vendor" />
+          <label for="Vendor">I'm a Vendor</label>
+          <!-- <input type="submit" value="Login" /> -->
+          <button type="submit">Sign Up</button>
           <button type="button" onclick="showLoginDialog(false)">Cancel</button>
         </form>
       </div>
@@ -74,3 +75,4 @@
     <script src="script.js"></script>
   </body>
 </html>
+
