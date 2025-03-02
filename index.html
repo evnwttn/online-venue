@@ -1,4 +1,3 @@
-<!-- index HTML -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -17,11 +16,11 @@
             class="login"
             id="logbtn"
             type="submit"
-            onclick="dialog.showModal(true)"
+            onclick="showLoginDialog(true, 'signup')"
           >
             User Login
           </button>
-          <button class="btn btn-primary" onclick="dialog.showModal()">
+          <button class="btn btn-primary" onclick="showLoginDialog(true, 'signup')">
             Vendor Login
           </button>
         </ul>
@@ -35,7 +34,7 @@
       </h2>
     </div>
     <div id="based" align="center">
-      Book unique party venues for unforgottable celebrations
+      Book unique party venues for unforgettable celebrations
       <div class="searchsider" align="center">
         <input
           type="text"
@@ -43,42 +42,51 @@
           placeholder="Search for a venue"
           onkeyup="search()"
         />
-        <button class="src vns" onclick="showLoginDialog(true)">
-         Search Venues
+        <button class="src vns" onclick="showLoginDialog(true, 'signup')">
+          Search Venues
         </button>
+      </div>
     </div>
 
+    <!-- Dialog for Sign Up and Sign In -->
     <dialog id="lgn">
-      <div class="wrapper">
-        <h2>Sign Up</h2>
-        <form id="userForm">
-          <input type="email" id="email" placeholder="email" />
-          <input type="password" id="password" placeholder="Password" />
-          
-          <input type="name" id="name" placeholder="Name" />
-          <label for="country">Country</label>
-          <span style="color: red !important; display: inline; float: none"
-            >*</span>
-          <!-- https://gist.github.com/danrovito/977bcb97c9c2dfd3398a -->
-          <select id="country" name="country" class="form-control">
-            <option value="" disabled selected>Select your country</option>
-          </select>
-          <input type="checkbox" id="checkbox" />
-          <label for="checkbox">I'm a Vendor</label>
-          <!-- <input type="submit" value="Login" /> -->
-          <button type="submit">Sign Up</button>
-          <button type="button" onclick="showLoginDialog(false)">Cancel</button>
-        </form>
-        <p>Already have an account? <a href="javascript:showLoginDialog(true)" > Log in </a></p>
-      </div>
-    </dialog>
-    <p>Already have an account? <a href="javascript:showLoginDialog(true)" > Log in </a></p>
+  <div class="wrapper">
+    <!-- Sign Up Form -->
+    <div id="signupForm">
+      <h2>Sign Up</h2>
+      <form id="userForm">
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <input type="text" id="name" placeholder="Name" required />
+        <label for="country">Country</label>
+        <select id="country" name="country" class="form-control" required>
+          <option value="" disabled selected>Select your country</option>
+        </select>
+        <input type="checkbox" id="checkbox" />
+        <label for="checkbox">I'm a Vendor</label>
+        <button type="submit">Sign Up</button>
+        <button type="button" onclick="showLoginDialog(false)">Cancel</button>
+      </form>
+      <p>Already have an account? <a href="javascript:showLoginDialog(true, 'signin')">Log in</a></p>
+    </div>
 
-    <!--https://www.youtube.com/watch?v=t_GuuhNNcNQ-->
+    <!-- Sign In Form -->
+    <div id="signinForm" style="display: none;">
+      <h2>Sign In</h2>
+      <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Email" required />
+        <input type="password" id="loginPassword" placeholder="Password" required />
+        <button type="submit">Sign In</button>
+        <button type="button" onclick="showLoginDialog(false)">Cancel</button>
+      </form>
+      <p>Don't have an account? <a href="javascript:showLoginDialog(true, 'signup')">Sign up</a></p>
+    </div>
+  </div>
+</dialog>
+
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
   </body>
 </html>
-
