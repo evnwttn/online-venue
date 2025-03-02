@@ -1,207 +1,237 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* https://www.youtube.com/watch?v=Sv_NAxi_jNs&list=PLZlA0Gpn_vH9D0J0Mtp6lIiD_8046k3si&index=4 */
-@import url('https://fonts.google.com/share?selection.family=Raleway:ital,wght@0,100..900;1,100..900');
-
+/* Custom Font */
 @font-face {
-    font-family: "Booter - Zero Zero.woff";
-    src: url("font/Booter - Zero Zero.woff"), format("woff"),
-         url("font/Booter - Zero Zero.woff2"), format("woff2");
+    font-family: "Booter - Zero Zero";
+    src: url("font/Booter - Zero Zero.woff") format("woff"),
+         url("font/Booter - Zero Zero.woff2") format("woff2");
 }
-/* https://www.youtube.com/watch?v=Sv_NAxi_jNs&list=PLZlA0Gpn_vH9D0J0Mtp6lIiD_8046k3si&index=4 */
+
+/* Global Styles */
 * {
-
-    box-sizing: border-box ;
-    font-family: Raleway, sans-serif;
-    color: #000000
-}
-
-html , body {
-
-    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    color: #000000;
     margin: 0;
-}   
- .nav ul {
-
-margin-left: -80%;
-   }
-.searchsider {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    background-color: #e7eaed;
-    padding: 30px;
-    width: 88%;
-    
-   
-
-
+    padding: 0;
 }
-.src {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    background-color: #e7eaed;
-    padding: 10px;
 
-    border: solid rgb(0, 0, 0) 0px;
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    border-radius: 33px;
-    padding: 10px 10px;;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
 }
-.btn {
+
+/* Navigation Bar */
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the far right */
+    align-items: center;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.nav li {
+    display: inline-block;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: rgba(247, 222, 61, 0.3);
+    border-radius: 5px;
+}
+
+/* Buttons */
+.btn, .login, .src {
     background-color: #000000;
     color: rgb(255, 255, 255);
     border-radius: 33px;
     padding: 10px 20px;
-
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
 }
-.login{
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    border-radius: 33px;
-    padding: 10px 20px;
+
+.btn:hover, .login:hover, .src:hover {
+    background-color: #333333;
 }
-   .nav li {
-   display: inline-flex
-    
-   }
-   .mainbody {
 
+/* Main Header */
+.mainheader {
     display: flex;
-    background: #ffffff;
-    border: solid rgb(0, 0, 0) 0px;
-    flex-direction: column;
-    min-height: 100vh;
+    justify-content: space-between; /* Logo on the left, buttons on the right */
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
 
-   }
-   #based {
-    display: flex;
-    flex-direction: column;
-    flex: 0; 
-    margin: -190px;
-    padding: 10px;
-    border: solid rgb(0, 0, 0) 0px;
+.main-name-large {
+    font-family: "Booter - Zero Zero", sans-serif;
+    font-size: 3.5em;
+    font-weight: normal;
+    margin: 0;
+}
 
-   }
-   .mainsearch {
-
+/* Main Search Section */
+.mainsearch {
     display: flex;
     flex-direction: column;
-
     justify-content: center;
+    align-items: center;
     height: 350px;
     background-color: #e7eaed;
-   }
+    padding: 20px;
+    text-align: center;
+}
 
-   .mainsearch h2  {
-    display: flex;
+.mainsearch h2 {
     font-size: 32px;
-    width: 100%;
-    height: 400px;
-    justify-content: center;
     margin: 0;
     margin-top: 50px;
-    padding: 0;
-    border: solid rgb(0, 0, 0) 0.0px;
+}
 
-
-   }
-
-    #userForm {
-      
-        margin: 40px;
-        padding: 10px;
-        border-radius: 5px;
-        border: 0px solid #ccc;
-    }
-    #userForm input {
-        display: flex;
-        flex-direction: column;
-        margin: 20px;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-    } 
-    #userForm button {
-        display: flex;
-        flex-direction: column;
-        margin: 20px;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-    } 
-    #userForm .label #Vendor{
-        display: flex;
-       
-    }
-    #userForm .label #name{
-        display: flex;
-       
-    }
-   .mainheader {
+.searchsider {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    height: 150px;
-    flex-grow: 1;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
 
-    justify-content: space-between;
-    border: solid rgb(0, 0, 0) 0px;
-    width: 100%;
-    padding: 15px;
-    background: #ffffff;
+.searchsider input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    font-size: 16px;
+}
+
+/* Dialog (Sign Up / Sign In Forms) */
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    position: fixed; /* Center the dialog */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the dialog */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.wrapper h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#userForm, #loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#userForm input, #loginForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#userForm button, #loginForm button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#userForm button:hover, #loginForm button:hover {
+    background-color: #333333;
+}
+
+#userForm label, #loginForm label {
+    font-weight: 500;
+}
+
+/* Center the checkbox */
+#userForm input[type="checkbox"] {
+    margin: 0 auto; /* Center the checkbox */
+    display: block; /* Ensure it takes up its own line */
+}
+
+/* Toggle between Sign Up and Sign In Forms */
+#signupForm, #signinForm {
+    display: none;
+}
+
+#signupForm.active, #signinForm.active {
+    display: block;
+}
+
+/* Links inside the dialog */
+.wrapper a {
+    color: #0000ee;
+    text-decoration: none;
+    font-weight: 500;
+    transition: text-decoration 0.3s ease;
+}
+
+.wrapper a:hover {
+    text-decoration: underline;
+}
+
+/* Footer-like text */
+.wrapper p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-name-large {
+        font-size: 2.5em;
     }
-    .mainheader #h1 {
-        display: inline-block;
-        margin: 20;
-        justify-content: flex-end;
+
+    .mainsearch h2 {
+        font-size: 24px;
+    }
+
+    .searchsider input {
+        width: 100%;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 0;
     }
 
     .nav a {
-
-        display: inline-block;
-        text-decoration: none;
-        color: black;
-        padding: 10px;
-
-        
+        padding: 8px 12px;
     }
-
-    .nav a:hover {
-        background-color: rgba(247, 222, 61, 0.3);
-       
-    }
-
-    .main-nav {
-        text-align: center;
-        font-size: 1.1em;
-        font-weight: lighter;
-        /* border-bottom: 1px solid rgb(163, 140, 85, .3); */
-    }
-    
-    .main-nav li {
-
-        padding: 0 5%;
-    }
-
-    .main-name-large {
-
-        text-align: left;
-        margin: 0;
-        font-size: 4em;
-        font-family: "Booter - Zero Zero.woff";
-        margin: 20px;
-        font-weight: normal;
-    }
-
-    dialog {
-        padding: 0;
-    }
-
-
-     a:hover {
-  /* text-decoration: underline; */
 }
