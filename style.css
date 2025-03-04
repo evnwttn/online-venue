@@ -23,17 +23,21 @@ html, body {
     padding: 0;
     background-color: #ffffff;
 }
-
-/* Navigation Bar */
+/* Navigation Wrapper */
+.nav {
+    flex-grow: 1; /* Allows the navigation to take available space */
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+}
+/* Navigation Links */
 .nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    justify-content: flex-end; /* Align buttons to the far right */
+    justify-content: center; /* Center links inside the nav */
     align-items: center;
     gap: 20px;
-    margin-right: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav li {
@@ -55,6 +59,7 @@ html, body {
 
 /* Buttons */
 .btn, .login, .src {
+    
     background-color: #000000;
     color: rgb(255, 255, 255);
     border-radius: 33px;
@@ -70,16 +75,22 @@ html, body {
 }
 
 /* Main Header */
+/* Main Header */
 .mainheader {
     display: flex;
-    justify-content: space-between; /* Logo on the left, buttons on the right */
+    flex-direction: row-reverse; /* Keeps logo on the left and buttons on the right */
     align-items: center;
     padding: 15px 30px;
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
 }
 
+
+/* Logo */
 .main-name-large {
+    display: flex;
+    
+    flex: 0 1 auto;;
     font-family: "Booter - Zero Zero", sans-serif;
     font-size: 3.5em;
     font-weight: normal;
@@ -226,7 +237,7 @@ dialog {
     }
 
     .nav ul {
-        flex-direction: column;
+        
         gap: 10px;
         margin-right: 0;
     }
