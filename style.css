@@ -25,25 +25,40 @@ html, body {
 }
 /* Navigation Wrapper */
 .nav {
-    flex-grow: 1; /* Allows the navigation to take available space */
+    flex: 2.2; 
     display: flex;
+    
     justify-content: center; /* Center the navigation links */
 }
 /* Navigation Links */
 .nav ul {
     list-style-type: none;
     display: flex;
+   
     justify-content: center; /* Center links inside the nav */
     align-items: center;
     gap: 20px;
     margin: 0;
     padding: 0;
 }
+.header-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: auto; /* Pushes the buttons to the right */
+}
 
 .nav li {
     display: inline-block;
+    justify-content: space-around;
+
 }
 
+/* BUTTONS ALIGN TO THE RIGHT */
+.header-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: auto; /* Pushes the buttons to the far right */
+}
 .nav a {
     text-decoration: none;
     color: black;
@@ -74,10 +89,22 @@ html, body {
     background-color: #333333;
 }
 
+.btn {
+    display: flex;
+    flex-grow: 1;
+
+}
+
+.btn .btn-primary {
+    display: flex;
+    flex-shrink: 1;
+
+}
 /* Main Header */
 /* Main Header */
 .mainheader {
     display: flex;
+    justify-content: space-between;
     flex-direction: row-reverse; /* Keeps logo on the left and buttons on the right */
     align-items: center;
     padding: 15px 30px;
@@ -90,7 +117,7 @@ html, body {
 .main-name-large {
     display: flex;
     
-    flex: 0 1 auto;;
+    flex: 1.5; /* Takes up 1.5 times the space of the other elements */
     font-family: "Booter - Zero Zero", sans-serif;
     font-size: 3.5em;
     font-weight: normal;
@@ -108,6 +135,7 @@ html, body {
     padding: 20px;
     text-align: center;
 }
+
 
 .mainsearch h2 {
     font-size: 32px;
@@ -235,9 +263,10 @@ dialog {
     .searchsider input {
         width: 100%;
     }
-
+  
     .nav ul {
-        
+        display: flex;
+        justify-content: center;
         gap: 10px;
         margin-right: 0;
     }
