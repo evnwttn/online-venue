@@ -32,20 +32,29 @@
     </header>
     <div class="mainsearch">
       <h2 align="center">
-        Find the perfect Venue for your Birthday<br />
+        Find the perfect Venue for your Birthday
         Party
       </h2>
-    </div>
-    <div id="based" align="center">
-      Book unique party venues for unforgettable celebrations
-      <div class="searchsider" align="center">
+    <!-- </div>
+    <div id="based" align="center"> -->
+      <br> Book unique party venues for unforgettable celebrations
+      
+      <div class="searchsider" >
+        <div class="custom-select" style="width:200px;">
+        <select name="sizes" id="sizes">
+          <option value="allsize">All Size</option>
+          <option value="birthday">Birthday</option>
+          <option value="Meeting Room">Meeting Room</option>
+        </select>
+        </div>
         <input
           type="text"
           id="search"
-          placeholder="Search for a venue"
+          placeholder="Type Keyword to Search"
           onkeyup="search()"
         />
-        <button class="src vns" onclick="showLoginDialog(true, 'signup')">
+        
+        <button class="src vns" onclick="search()">
           Search Venues
         </button>
       </div>
