@@ -44,8 +44,10 @@ html, body {
 .header-buttons {
     display: flex;
     gap: 10px;
-    margin-left: auto; /* Pushes the buttons to the right */
+    margin-left: auto; 
 }
+
+
 
 .nav li {
     display: inline-block;
@@ -149,6 +151,10 @@ html, body {
     align-items: center;
     gap: 10px;
     margin-top: 20px;
+    padding: 30px;
+    
+    border: 1px solid #ccc;
+   
 }
 
 .searchsider input {
@@ -268,7 +274,10 @@ dialog {
     .searchsider input {
         width: 100%;
     }
-  
+.searchsider .custom-select {
+    width: 11%;
+    border: #d82c54 1px solid;
+}
     .nav ul {
         display: flex;
         justify-content: center;
