@@ -1,9 +1,28 @@
 const dialog = document.getElementById("lgn");
 const wrapper = document.querySelector(".wrapper");
 const userForm = document.getElementById("userForm");
+const loginForm = document.getElementById("loginForm");
 
-const showLoginDialog = (show) => (show ? dialog.showModal() : dialog.close());
+// Function to show/hide the login dialog and toggle between forms
+const showLoginDialog = (show, formType = 'signup') => {
+  const signupForm = document.getElementById("signupForm");
+  const signinForm = document.getElementById("signinForm");
 
+  if (show) {
+    dialog.showModal();
+    if (formType === 'signup') {
+      signupForm.style.display = 'block';
+      signinForm.style.display = 'none';
+    } else if (formType === 'signin') {
+      signupForm.style.display = 'none';
+      signinForm.style.display = 'block';
+    }
+  } else {
+    dialog.close();
+  }
+};
+
+// Close the dialog when clicking outside of it
 const closeDialogOnOutsideClick = (e) => {
   if (!wrapper.contains(e.target)) {
     dialog.close();
@@ -12,34 +31,33 @@ const closeDialogOnOutsideClick = (e) => {
 
 dialog.addEventListener("click", closeDialogOnOutsideClick);
 
+// Function to save a new user to localStorage
 const saveUserToLocalStorage = (userData) => {
-  // checking in local storage to see if we've stored any users
   const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Check if the user already exists
-    const userExists = users.some((user) => user.email === userData.email);
-    if (userExists) {
-      alert("User with this email already exists!");
-      return; // Stop the function if the user exists
-    }
-  // the users array will contain all of the users we've stored, or nothing
-  // push will push the userData we are passing in, into that array
+  // Check if the user already exists
+  const userExists = users.some((user) => user.email === userData.email);
+  if (userExists) {
+    alert("User with this email already exists!");
+    return; // Stop the function if the user exists
+  }
+
+  // Add the new user to the array
   users.push(userData);
 
-  //   then we are setting users in local storage, but making sure we convert it back to a string
-    // Save the updated users array back to localStorage
-    localStorage.setItem("users", JSON.stringify(users));
-    alert("User registered successfully!");
+  // Save the updated users array back to localStorage
+  localStorage.setItem("users", JSON.stringify(users));
+  alert("User registered successfully!");
 };
 
+// Function to log all stored users (for debugging)
 const logStoredUsers = () => {
   const users = JSON.parse(localStorage.getItem("users")) || [];
   console.log("Stored Users:", users);
-  
 };
 
+// Function to handle sign-up form submission
 const handleFormSubmit = (e) => {
-  // this will prevent the page from reloading
   e.preventDefault();
 
   const userData = {
@@ -47,27 +65,49 @@ const handleFormSubmit = (e) => {
     email: document.getElementById("email").value,
     country: document.getElementById("country").value,
     password: document.getElementById("password").value,
-    
+    checkbox: document.getElementById("checkbox").checked,
   };
 
   console.log("User Input:", userData);
 
-  // save the user to local storage
+  // Save the user to localStorage
   saveUserToLocalStorage(userData);
 
-  // alert(
-  //   "Thank you for submitting your information!\n\nName: " +
-  //     userData.name +
-  //     "\nEmail: " +
-  //     userData.email +
-  //     "\nCountry: " +
-  //     userData.country
-  // );
-
+  // Reset the form
   userForm.reset();
 };
 
+// Function to check user credentials (login)
+const checkUserCredentials = (email, password) => {
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  const user = users.find(
+    (user) => user.email === email && user.password === password
+  );
+  return user; // Returns the user object if found, otherwise undefined
+};
+
+// Function to handle login form submission
+const handleLogin = (e) => {
+  e.preventDefault();
+
+  const email = document.getElementById("loginEmail").value;
+  const password = document.getElementById("loginPassword").value;
+
+  const user = checkUserCredentials(email, password);
+
+  if (user) {
+    alert("You are signed in!");
+    console.log("Signed in user:", user);
+  } else {
+    alert("Invalid email or password.");
+  }
+};
+
+// Add event listeners
 userForm.addEventListener("submit", handleFormSubmit);
+if (loginForm) {
+  loginForm.addEventListener("submit", handleLogin);
+}
 
 /////////////////////////////////////////////////////////////////////////////////////
 
@@ -219,7 +259,7 @@ const countries = [
   "Zambia",
   "Zimbabwe",
 ];
-
+// Populate the country dropdown
 const populateCountrySelect = (selectId, countryList) => {
   const selectElement = document.getElementById(selectId);
   if (!selectElement) return;
@@ -232,47 +272,8 @@ const populateCountrySelect = (selectId, countryList) => {
   });
 };
 
+// Initialize the app
 document.addEventListener("DOMContentLoaded", () => {
   populateCountrySelect("country", countries);
   logStoredUsers();
 });
-/////////////////////////////////////////////////////////////////////////////////////
-// Function to check user credentials (login)
-const checkUserCredentials = (email, password) => {
-  const users = JSON.parse(localStorage.getItem("users")) || [];
-  const user = users.find(
-    (user) => user.email === email && user.password === password
-  );
-  return user; // Returns the user object if found, otherwise undefined
-};
-
-
-// Function to handle login form submission
-const handleLogin = (e) => {
-  e.preventDefault();
-
-  const email = document.getElementById("loginEmail").value;
-  const password = document.getElementById("loginPassword").value;
-
-  const user = checkUserCredentials(email, password);
-
-  if (user) {
-    alert("You are signed in!");
-    console.log("Signed in user:", user);
-  } else {
-    alert("Invalid email or password.");
-  }
-};
-// Add event listener for login form submission
-const loginForm = document.getElementById("loginForm");
-if (loginForm) {
-  loginForm.addEventListener("submit", handleLogin);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  populateCountrySelect("country", countries);
-  logStoredUsers();
-});
-
-
-

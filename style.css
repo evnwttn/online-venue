@@ -219,9 +219,12 @@ dialog {
 
 /* Center the checkbox */
 #userForm input[type="checkbox"] {
-    margin: 0 auto; /* Center the checkbox */
-    display: block; /* Ensure it takes up its own line */
+   
+    margin: 10px 0;
+    
+   
 }
+
 
 /* Toggle between Sign Up and Sign In Forms */
 #signupForm, #signinForm {
@@ -275,3 +278,4 @@ dialog {
         padding: 8px 12px;
     }
 }
+
