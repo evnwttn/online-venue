@@ -128,7 +128,9 @@ html, body {
 
 /* Main Search Section */
 .mainsearch {
-    
+    background-image: url(img/blur.png);
+    position: relative;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
