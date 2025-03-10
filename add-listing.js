@@ -34,4 +34,8 @@ PreviousBtn.addEventListener("click", () => {
     }
     content.innerText = `Step Number ${currentStep}`;
 
-})
+});
+
+finishBtn.addEventListener("click", () => {
+    location.reload();
+});
