@@ -5,13 +5,12 @@
 button {
     padding: 5px 10px;
     border: 1px solid black
-    transition 250ms bacjground-color;
+    transition: 250ms bacjground-color;
 
 }
 
 button:hover {
-    cursor: pointer
-    ;
+    cursor: pointer;
     background-color: #000000;
     color: white;
 }
@@ -35,4 +34,54 @@ button:disabled:hover {
     justify-content: center;
     margin: 20px auto 0 auto;
     padding: 40px;
+}
+
+#stepProgressBar {
+
+    display: flex;
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    justify-content: space-between;
+    align-items:flex-end ;
+}
+.steps {
+
+    text-align: center;
+
+}
+
+.step-text {
+    margin-bottom: 10px;
+    color: blue;
+}
+ 
+.bullet {
+
+    height: 20;
+    width: 20px;
+    border-radius: 100%;
+    border: 1px solid green;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    position: relative;
+    transition: background-color 500ms;
+    line-height: 20px;
+}
+
+.bullet.completed {
+    background-color: green;
+    color: white;
+}
+
+.bullet.completed::after {
+    content: '';
+    position: absolute;
+    height: 9px;
+    width: 57px;
+    background-color: green;
+    right: -60px;
+    bottom: 5px;
+
+
 }
