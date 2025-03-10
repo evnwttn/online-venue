@@ -1,54 +1,38 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-/* Custom Font */
-@font-face {
-    font-family: "Booter - Zero Zero";
-    src: url("font/Booter - Zero Zero.woff") format("woff"),
-         url("font/Booter - Zero Zero.woff2") format("woff2");
-}
-
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
-}
-
-body {
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-}
-
 .hidden {
     display: none;
 }
 
 button {
     padding: 5px 10px;
-    border: 1px solid black;
-    transition: 250ms background-color;
+    border: 1px solid black
+    transition 250ms bacjground-color;
+
 }
 
 button:hover {
-    cursor: pointer;
-    color: white;
+    cursor: pointer
+    ;
     background-color: #000000;
+    color: white;
 }
+
 
 button:disabled:hover {
-   opacity: 0.6;
-   cursor: not-allowed;
+
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
-.container {
-   max-width: 700px;
-   margin: 20px auto o auto;
-   padding: 40px;
+.text-center {
+    text-align: center;
+}
 
+
+
+.container {
+    display: flex;
+    max-width: 700px;
+    justify-content: center;
+    margin: 20px auto 0 auto;
+    padding: 40px;
 }
