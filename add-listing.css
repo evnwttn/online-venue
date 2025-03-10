@@ -1,85 +1,54 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Custom Font */
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("font/Booter - Zero Zero.woff") format("woff"),
+         url("font/Booter - Zero Zero.woff2") format("woff2");
+}
+
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
 }
 
-.main {
-    width: 100%;
-    height: 30% ; 
-    display: flex;
-    justify-content: center;
+body {
+    height: 100vh;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
 }
 
-ul {
+.container {
+  
+  margin-top: 30px;
+  margin-left: 90px;
+  max-width: 700px;
+  width: 100%;
+  background-color: grey;
+
+}
+
+.container .steps {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
+    background-color: green;
 }
+    
+    
 
-
-ul li .icons {
-    font-size: 25px;
-    color: #0f6299;
-    margin: 0 60px;
-}
-
-ul li .label {
-    font-family: "Booter - Zero Zero", sans-serif;
-    letter-spacing: 1px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #0f6299;
-}
-
-ul li .step {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background-color: #d7d7c3;
-    margin: 16px 0 10px;
-    display: grid;
-    place-items: center;
-    color: #0f6299;
-    position: relative;
-    cursor: pointer;
-}
-
-.step::after {
-    content: "";
-    position: absolute;
-    width: 197px;
-    height: 3px;
-    background-color: #d7d7c3;
-    right: 30px;
-}
-
-.first::after {
-    width: 0;
-    height: 0;
-}
-
-ul li .step .awesome {
-    display: none;
-}
-
-ul li .step p {
-    font-size: 18px;
-}
-
-ul li .active {
-    background-color: #0f6299;
-}
-
-li .active::after {
-    background-color: #0f6299;
-
-}
-
-ul li .active p {
-    display: none;
-}
-
-ul li .active .awesome {
-    display: flex;
+.steps .circle {
+    width: 50%;
+    height: 50%;
+    background-color: green;
+    border: 4x solid #e0e0e0    
 }
