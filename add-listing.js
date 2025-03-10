@@ -21,4 +21,17 @@ NextBtn.addEventListener("click", () => {
     }
 
     content.innerText = `Step Number ${currentStep}`;
+});
+
+PreviousBtn.addEventListener("click", () => {
+    const PreviousBtn = bullets[currentStep - 2];
+    PreviousBtn.classList.remove("completed");
+    currentStep--;
+    NextBtn.disabled = false;
+    finishBtn.disabled = true;
+    if(currentStep === 1){
+        PreviousBtn.disabled = true;
+    }
+    content.innerText = `Step Number ${currentStep}`;
+
 })
