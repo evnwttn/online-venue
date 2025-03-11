@@ -85,3 +85,13 @@ button:disabled:hover {
 
 
 }
+.main {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: auto 50px auto 50px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
