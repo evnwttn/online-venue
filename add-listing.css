@@ -77,11 +77,11 @@ button:disabled:hover {
 .bullet.completed::after {
     content: '';
     position: absolute;
-    height: 9px;
+    height: 1px;
     width: 57px;
     background-color: green;
-    right: -60px;
-    bottom: 5px;
+    right: -69px;
+    bottom: 11px;
 
 
 }

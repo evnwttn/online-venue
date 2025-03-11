@@ -3,6 +3,7 @@ const NextBtn = document.getElementById("NextBtn");
 const finishBtn = document.getElementById("finishBtn");
 
 const content = document.getElementById("content");
+//es6 syntax for aarays-it's gonna takes all the elements with the class bullet and put them in an array
 const bullets = [ ...document.querySelectorAll(".bullet")];
 
 const MAX_STEPS = 7;
