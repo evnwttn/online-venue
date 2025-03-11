@@ -80,8 +80,9 @@ button:disabled:hover {
     height: 1px;
     width: 57px;
     background-color: green;
+    /* green line */
     right: -69px;
-    bottom: 11px;
+    bottom: 9px;
 
 
 }
