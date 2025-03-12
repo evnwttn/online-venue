@@ -4,8 +4,8 @@
 /* Custom Font */
 @font-face {
     font-family: "Booter - Zero Zero";
-    src: url("font/Booter - Zero Zero.woff") format("woff"),
-         url("font/Booter - Zero Zero.woff2") format("woff2");
+    src: url("../font/Booter - Zero Zero.woff") format("woff"),
+         url("../font/Booter - Zero Zero.woff2") format("woff2");
 }
 
 /* Global Styles */
@@ -128,7 +128,7 @@ html, body {
 
 /* Main Search Section */
 .mainsearch {
-    background-image: url(img/blur.png);
+    background-image: url(../img/blur.png);
     position: relative;
     background-size: cover;
     display: flex;
