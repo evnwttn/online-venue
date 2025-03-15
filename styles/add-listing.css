@@ -15,6 +15,15 @@ button:hover {
     color: white;
 }
 
+.form-group {
+    display: flex;
+    width: 100%;
+
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10 10 10 10;
+    gap: 5px; /* Adds spacing between label and input */
+}
 
 button:disabled:hover {
 
@@ -102,7 +111,7 @@ button:disabled:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     width: 100vh;
     padding: 20px;
     height: auto;
