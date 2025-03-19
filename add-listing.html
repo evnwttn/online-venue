@@ -158,9 +158,119 @@
     <!-- Step 1-->
 
     <div class="page page2">
+      <div class="main form">
+        <form class="form" id="form">
       <h2>Step 2: Price</h2>
-      <label for="price">Price</label>
-      <input type="number" id="price" name="price" required />
+      <!-- Listing Price Section -->
+      <h1>Listing Price</h1>
+      <p class="mandatory-fields">These fields are mandatory: Main Category, Second Category</p>
+
+      <!-- Booking Type Section -->
+      <div class="section">
+          <h2>Booking Type</h2>
+          <div class="flex-group">
+              <label for="booking-type">Booking Type</label>
+              <select id="booking-type" name="booking-type">
+                  <option value="per-hour">Per Hour</option>
+              </select>
+          </div>
+          <div class="flex-group">
+              <label for="price-per-hour">Price per hour (only numbers)</label>
+              <input type="number" id="price-per-hour" name="price-per-hour" placeholder="Enter price">
+          </div>
+          <div class="flex-group">
+              <label for="before-label">Before Label</label>
+              <input type="text" id="before-label" name="before-label" placeholder="Enter label">
+          </div>
+          <div class="flex-group">
+              <label for="after-label">After Label</label>
+              <input type="text" id="after-label" name="after-label" placeholder="Enter label">
+          </div>
+      </div>
+
+      <!-- Taxes and Fees Section -->
+      <div class="section">
+          <h2>Taxes and Fees</h2>
+          <div class="flex-group">
+              <label for="taxes">Taxes in % (included in price)</label>
+              <input type="number" id="taxes" name="taxes" placeholder="Enter tax percentage">
+          </div>
+          <div class="flex-group">
+              <label for="cleaning-fee">Cleaning Fee in $ (only numbers)</label>
+              <input type="number" id="cleaning-fee" name="cleaning-fee" placeholder="Enter cleaning fee">
+          </div>
+          <div class="flex-group">
+              <label for="minimum-hours">Minimum hours of booking</label>
+              <input type="number" id="minimum-hours" name="minimum-hours" placeholder="Enter minimum hours">
+          </div>
+          <div class="flex-group">
+              <label for="security-deposit">Security Deposit in $</label>
+              <input type="number" id="security-deposit" name="security-deposit" placeholder="Enter deposit amount">
+          </div>
+          <div class="flex-group">
+              <label for="early-bird-discount">Early Bird Discount in %</label>
+              <input type="number" id="early-bird-discount" name="early-bird-discount" placeholder="Enter discount percentage">
+          </div>
+      </div>
+
+      <!-- Business Hours Section -->
+      <div class="section">
+          <h2>Business Hours</h2>
+          <div class="flex-group">
+              <label for="start-hour">Start Hour</label>
+              <input type="time" id="start-hour" name="start-hour" value="00:00">
+          </div>
+          <div class="flex-group">
+              <label for="end-hour">End Hour</label>
+              <input type="time" id="end-hour" name="end-hour" value="24:00">
+          </div>
+      </div>
+
+      <!-- Price Adjustments Table -->
+      <div class="section">
+          <h2>Price Adjustments</h2>
+          <p>*Click to select multiple days and modify price for a certain period</p>
+          <div class="table-container">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>M</th>
+                          <th>T</th>
+                          <th>W</th>
+                          <th>T</th>
+                          <th>F</th>
+                          <th>S</th>
+                          <th>S</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <!-- Example Rows -->
+                      <tr>
+                          <td>1</td>
+                          <td>2</td>
+                          <td>3</td>
+                          <td>4</td>
+                          <td>5</td>
+                          <td>6</td>
+                          <td>7</td>
+                      </tr>
+                      <tr>
+                          <td>2.42</td>
+                          <td>2.43</td>
+                          <td>2.43</td>
+                          <td>2.43</td>
+                          <td>2.43</td>
+                          <td>2.43</td>
+                          <td>2.43</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+</form>
+</div>
+      <!-- Save Button -->
+     
     </div>
     <div class="page page3">
       <h2>Step 3: Images</h2>
