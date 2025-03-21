@@ -251,50 +251,45 @@
    
     <div class="page page3">
      
-      <div class="container">
-        <h1>Listing Media</h1>
-        <p>These fields are mandatory: Main Category, Second Category</p>
+      <div class="media-container">
+        <h1 class="media-title">Listing Media</h1>
+        <p class="mandatory-fields">These fields are mandatory: Main Category, Second Category</p>
         
-        <div class="form-group">
-            <label for="main-category">Main Category</label>
-            <select id="main-category" name="main-category">
+        <div class="input-section">
+            <label for="main-category" class="input-label">Main Category</label>
+            <select id="main-category" name="main-category" class="input-field">
                 <option value="">Select Main Category</option>
                 <!-- Add more options here -->
             </select>
         </div>
         
-        <div class="form-group">
-            <label for="second-category">Second Category</label>
-            <select id="second-category" name="second-category">
+        <div class="input-section">
+            <label for="second-category" class="input-label">Second Category</label>
+            <select id="second-category" name="second-category" class="input-field">
                 <option value="">Select Second Category</option>
                 <!-- Add more options here -->
             </select>
         </div>
         
-        <div class="drag-drop-area">
+        <div class="media-upload-area">
             <p>Drag and Drop Images or</p>
             <p>Select Media</p>
-            <p><em>Double Click on the image to select featured.</em></p>
-            <p><em>Change images order with Drag & Drop.</em></p>
+            <label for="images">Images</label>
+      <input type="file" id="images" name="images" required /> 
         </div>
         
-        <div class="form-group">
-            <label for="youtube-video">Video from YouTube</label>
-            <input type="text" id="youtube-video" name="youtube-video" placeholder="Paste YouTube video URL">
+        <div class="input-section">
+            <label for="youtube-video" class="input-label">Video from YouTube</label>
+            <input type="text" id="youtube-video" name="youtube-video" class="input-field" placeholder="Paste YouTube video URL">
         </div>
         
-        <div class="form-group">
-            <label for="virtual-tour">Virtual Tour</label>
-            <textarea id="virtual-tour" name="virtual-tour" placeholder="Copy/paste the iframe code"></textarea>
+        <div class="input-section">
+            <label for="virtual-tour" class="input-label">Virtual Tour</label>
+            <textarea id="virtual-tour" name="virtual-tour" class="input-field" placeholder="Copy/paste the iframe code"></textarea>
         </div>
         
-        <button class="save-button">Save</button>
-        <p>Go to Details settings.</p>
-    </div>
-     
-      <!-- <h2>Step 3: Images</h2>
-      <label for="images">Images</label>
-      <input type="file" id="images" name="images" required /> -->
+    
+      
     
     
     </div>
