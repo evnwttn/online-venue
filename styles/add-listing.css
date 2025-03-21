@@ -175,19 +175,41 @@ th {
 }
 
 
-.form-group label {
+.media-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.media-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.mandatory-fields {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.input-section {
+    margin-bottom: 15px;
+}
+
+.input-label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-.form-group input, .form-group select, .form-group textarea {
+.input-field {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.drag-drop-area {
+.media-upload-area {
     border: 2px dashed #ccc;
     padding: 20px;
     text-align: center;
@@ -195,7 +217,26 @@ th {
     cursor: pointer;
 }
 
-.drag-drop-area:hover {
+.media-upload-area:hover {
     border-color: #000;
 }
 
+.action-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.action-button:hover {
+    background-color: #45a049;
+}
+
+.settings-link {
+    text-align: center;
+    margin-top: 10px;
+    color: #666;
+}
