@@ -233,8 +233,8 @@
         <h2>Price Adjustments</h2>
           <p>*Click to select multiple days and modify price for a certain period</p>
           <div id="price-calendar"></div>
-          <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
-          <script type="text/javascript" src="js/price-calendar.js"></script>
+          <script type="text/javascript" src="scripts/jquery-2.0.0.min.js"></script>
+          <script type="text/javascript" src="scripts/price-calendar.js"></script>
           <script type="text/javascript">
               var option = {
               date: new Date(2025, 1, 1)
@@ -248,10 +248,55 @@
     
      
     </div>
+   
     <div class="page page3">
-      <h2>Step 3: Images</h2>
+     
+      <div class="container">
+        <h1>Listing Media</h1>
+        <p>These fields are mandatory: Main Category, Second Category</p>
+        
+        <div class="form-group">
+            <label for="main-category">Main Category</label>
+            <select id="main-category" name="main-category">
+                <option value="">Select Main Category</option>
+                <!-- Add more options here -->
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="second-category">Second Category</label>
+            <select id="second-category" name="second-category">
+                <option value="">Select Second Category</option>
+                <!-- Add more options here -->
+            </select>
+        </div>
+        
+        <div class="drag-drop-area">
+            <p>Drag and Drop Images or</p>
+            <p>Select Media</p>
+            <p><em>Double Click on the image to select featured.</em></p>
+            <p><em>Change images order with Drag & Drop.</em></p>
+        </div>
+        
+        <div class="form-group">
+            <label for="youtube-video">Video from YouTube</label>
+            <input type="text" id="youtube-video" name="youtube-video" placeholder="Paste YouTube video URL">
+        </div>
+        
+        <div class="form-group">
+            <label for="virtual-tour">Virtual Tour</label>
+            <textarea id="virtual-tour" name="virtual-tour" placeholder="Copy/paste the iframe code"></textarea>
+        </div>
+        
+        <button class="save-button">Save</button>
+        <p>Go to Details settings.</p>
+    </div>
+     
+      <!-- <h2>Step 3: Images</h2>
       <label for="images">Images</label>
-      <input type="file" id="images" name="images" required />
+      <input type="file" id="images" name="images" required /> -->
+    
+    
     </div>
     <div class="page page4">
       <h2>Step 4: Details</h2>
