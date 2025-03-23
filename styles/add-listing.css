@@ -5,8 +5,7 @@
 button {
     padding: 5px 10px;
     border: 1px solid black
-    transition: 250ms bacjground-color;
-
+    transition: 250ms background-color;
 }
 
 button:hover {
@@ -287,4 +286,18 @@ th {
 
 .add-detail button:hover {
     background-color: #218838;
+}
+
+.delete-btn {
+    justify-items: end;
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
 }
