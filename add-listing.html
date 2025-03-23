@@ -253,22 +253,10 @@
       <div class="main form">
       <div class="media-container">
         <h1 class="media-title">Listing Media</h1>
-        <p class="mandatory-fields">These fields are mandatory: Main Category, Second Category</p>
+  
         
         <div class="input-section">
-            <label for="main-category" class="input-label">Main Category</label>
-            <select id="main-category" name="main-category" class="input-field">
-                <option value="">Select Main Category</option>
-                <!-- Add more options here -->
-            </select>
-        </div>
-        
-        <div class="input-section">
-            <label for="second-category" class="input-label">Second Category</label>
-            <select id="second-category" name="second-category" class="input-field">
-                <option value="">Select Second Category</option>
-                <!-- Add more options here -->
-            </select>
+            
         </div>
         
         <div class="media-upload-area">
@@ -303,11 +291,31 @@
     </div>
     <div class="page page4">
       <div class="main form">
-      <div class="media-container">
+       
+        <div class="media-container">
 
-        <h2>Step 4: Details</h2>
-        <label for="details">Details</label>
-        <textarea id="details" name="details" required></textarea>
+        <h2>Step 4: Listing Details</h2>
+        <div class="flex-group">
+        <!-- <label for="details">Details</label> -->
+        <p>Size in ft2</p>
+       <textarea id="size" name="size" required></textarea>
+       <p>Rooms Number</p>
+        <textarea id="capacity" name="capacity" placeholder="capacity" required></textarea>
+       <p>Bathroom</p>
+        <textarea id="bathroom" name="bathroom" placeholder="bathroom" required></textarea>
+      <p>Good for Individual Work</p>
+      <select id="individual-worker" name="individual-worker" required>
+        <option value="yes">Not Available</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      <p>Client Meeting</p>
+      <select id="client-meeting" name="client-meeting" required>
+        <option value="yes">Not Available</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      </div>
       </div>
       </div>
     </div>
