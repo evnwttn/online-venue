@@ -315,6 +315,31 @@
         <option value="yes">Yes</option>
         <option value="no">No</option>
       </select>
+      <p>Good for Photoshoot</p>
+      <select id="good-for-photoshoot" name="good-for-photoshoot" required>
+        <option value="yes">Not Available</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      <p>Team Meeting</p>
+      <select id="team-meeting" name="team-meeting" required>
+        <option value="yes">Not Available</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+      
+      <div class="step4-container">
+        <p>Custom Details</p>
+        <div id="details-list">
+            <!-- Existing details can go here -->
+        </div>
+        <div class="add-detail">
+            <input type="text" id="label-input" placeholder="Label">
+            <input type="text" id="value-input" placeholder="Value">
+            <button id="add-detail-btn">Add Detail</button>
+        </div>
+    </div>
+
       </div>
       </div>
       </div>
@@ -351,7 +376,9 @@
     <script src="scripts/header.js"></script>
     <script src="scripts/add-listing.js"></script>
     <script src="scripts/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="scripts/detail-step4.js"></script>
+
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
   </body>
