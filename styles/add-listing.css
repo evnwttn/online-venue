@@ -302,7 +302,7 @@ th {
     background-color: #c82333;
 }
 
-.grid {
+#grid {
     display: grid;
-    grid-template-columns: 20% 20% 20%;
+    grid-template-columns: 60% 40% 40%;
 }
