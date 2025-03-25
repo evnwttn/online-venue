@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" type="text/css" href="styles/add-listing.css" />
     <link rel="stylesheet" type="text/css" href="styles/price-calendar.css">
+    <link href="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@3.0.3/styles/index.min.css" rel="stylesheet" />
   </head>
   <body id="mainbody">
     <div id="header-container"></div>
@@ -89,6 +90,7 @@
 </div>
 <!--Step 1-->
     <div class="page page1">
+      
       <div class="main form">
       <form class="form" id="form">
         
@@ -468,13 +470,22 @@
       </div>
     </div>
     </div>
-    </div>]
-    <div class="page page7">
-      <h2>Step 7: Calendar</h2>
-      <label for="calendar">Calendar</label>
-      <input type="date" id="calendar" name="calendar" required />
     </div>
 </div>
+     <!-- Step 7 -->
+    <div class="page page7">
+      <div class="main form">
+        <div class="media-container">
+        <div class="flex-group"> 
+      <h2>Step 7: Calendar</h2>
+      <div id="calendar"></div>
+      <!-- <label for="calendar">Calendar</label>
+      <input type="date" id="calendar" name="calendar" required /> -->
+    </div>
+    </div>
+    </div>
+    </div>
+
 
 
 <div class="main">
@@ -484,7 +495,7 @@
     <button id="NextBtn">Next</button>
     <button id="finishBtn" disabled>Finish</button>
 </div>   
-
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@3.0.3/index.min.js"></script>
     <script src="scripts/header.js"></script>
     <script src="scripts/add-listing.js"></script>
     <script src="scripts/script.js"></script>
