@@ -61,3 +61,21 @@ PreviousBtn.addEventListener("click", () => {
 finishBtn.addEventListener("click", () => {
   location.reload(); // Reload the page to reset the form
 });
+
+
+const { Calendar } = window.VanillaCalendarPro;
+
+const options = {
+  type: "multiple",
+  displayMonthsCount: 2,
+  selectionDatesMode: "multiple",
+  selectedTheme: "light",
+  onClickDate(self) {
+    const { selectedDates } = self.context;
+    console.log(selectedDates);
+  },
+};
+
+const calendar = new Calendar("#calendar", options);
+
+calendar.init();
