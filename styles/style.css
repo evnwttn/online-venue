@@ -299,3 +299,17 @@ dialog {
     padding: 20px;
     text-align: center;
 }
+.flex-footer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 20px auto auto;
+
+   
+}
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: text-decoration 0.3s ease;
+}
