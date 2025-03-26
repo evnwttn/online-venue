@@ -292,4 +292,10 @@ dialog {
         padding: 8px 12px;
     }
 }
-
+.footer {
+    background-color: #57bec3;
+    
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
