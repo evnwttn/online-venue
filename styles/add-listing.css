@@ -306,3 +306,8 @@ th {
     display: grid;
     grid-template-columns: 60% 40% 40%;
 }
+
+.bullet.completed-last {
+    background-color: green;
+    color: white;
+}

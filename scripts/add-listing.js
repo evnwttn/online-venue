@@ -21,10 +21,13 @@ function updateFormVisibility() {
 
   // Update progress bar highlighting
   bullets.forEach((bullet, index) => {
-    bullet.classList.toggle("completed", index < currentStep);
+    if (currentStep === 7) {
+      bullet.classList.toggle("completed-last", index < currentStep);
+    } else {
+      bullet.classList.toggle("completed", index < currentStep);
+    }
   });
 }
-
 // Initialize by showing only the first step
 updateFormVisibility();
 
