@@ -26,7 +26,7 @@ function handleChange(event) {
     
     nextBtn.addEventListener('click', function() {
       // Get all form values from Step 1
-      const formData = {
+      const formData1 = {
         title: document.getElementById('title').value,
         category: document.getElementById('category').value,
         room_type: document.getElementById('room_type').value,
@@ -35,10 +35,28 @@ function handleChange(event) {
         neighborhood: document.getElementById('neighborhood').value,
         property_description: document.getElementById('property_description').value
       };
-  
+      localStorage.setItem('step1FormData1', JSON.stringify(formData1));
+      console.log('Step 1 data saved:', formData1);
+
+        // Get all form values from Step 2
+        const formData2 = {
+            booking_type: document.getElementById('booking-type').value,
+            price_per_hour: document.getElementById('price-per-hour').value,
+            before_label: document.getElementById('before-label').value,
+            after_label: document.getElementById('after-label').value,
+            taxes: document.getElementById('taxes').value,
+            cleaning_fee: document.getElementById('cleaning-fee').value,
+            minimum_hours: document.getElementById('minimum-hours').value,
+            security_deposit: document.getElementById('security-deposit').value,
+            early_bird_discount: document.getElementById('early-bird-discount').value,
+            start_hour: document.getElementById('start-hour').value,
+            end_hour: document.getElementById('end-hour').value,
+            price_calendar: document.getElementById('price-calendar').value
+            
+          };
       // Save to localStorage
-      localStorage.setItem('step1FormData', JSON.stringify(formData));
-      
-      console.log('Step 1 data saved:', formData);
+      localStorage.setItem('step1FormData2', JSON.stringify(formData2));
+
+      console.log('Step 2 data saved:', formData2);
     });
   });
