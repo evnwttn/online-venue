@@ -55,8 +55,20 @@ function handleChange(event) {
             
           };
       // Save to localStorage
-      localStorage.setItem('step1FormData2', JSON.stringify(formData2));
+      localStorage.setItem('step1FormData3', JSON.stringify(formData2));
 
-      console.log('Step 2 data saved:', formData2);
+      console.log('Step 3 data saved:', formData2);
+
+              // Get all form values from Step 3
+              const formData3 = {
+                images: document.getElementById('images').value,
+                second_category: document.getElementById('second-category').value,
+                virtual_tour: document.getElementById('virtual-tour').value
+                
+              };
+          // Save to localStorage
+          localStorage.setItem('step1FormData3', JSON.stringify(formData3));
+    
+          console.log('Step 3 data saved:', formData3);
     });
   });
