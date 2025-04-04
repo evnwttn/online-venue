@@ -75,6 +75,8 @@ const handleFormSubmit = (e) => {
 
   // Reset the form
   userForm.reset();
+  //This triggers showing the "Submit Property" button
+  window.onUserLogin(userData);
 };
 
 // Function to check user credentials (login)
@@ -98,6 +100,8 @@ const handleLogin = (e) => {
   if (user) {
     alert("You are signed in!");
     console.log("Signed in user:", user);
+    //it cause "submit property" button to show after a user login
+    window.onUserLogin(user);
   } else {
     alert("Invalid email or password.");
   }
