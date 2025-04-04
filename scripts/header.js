@@ -21,3 +21,49 @@ document.addEventListener("DOMContentLoaded", function () {
       </header>
     `;
   });
+
+  
+
+  // if user login, account show; login button hide.
+  // else login button show; account hide.
+  $(document).ready(function(){
+
+
+    //By default account div will be hidden
+    // And login will be shown
+    $(".btn .btn-primary").hide();
+
+    // if login clicked
+    // and login successful
+    // store a session
+    $(".login").click(function(){
+
+        // Store a session key
+        // in this case, i have saved a random number
+        // you can store something unique
+        sessionStorage.setItem("session_key", Math.random());
+
+        // Then hide the login button
+        // And show account
+        $(".login").hide();
+        $(".btn .btn-primary").show();
+
+    });
+
+    // Now check if session already exists
+    // If session exists, show account div
+    // and hide login div
+    if (sessionStorage.getItem('session_key') !== null){
+        $(".login").hide();
+        $(".btn .btn-primary").show();
+    } 
+    // If session doesn't exist
+    // Show login div
+    // And hide account div
+    else {
+        $(".login").show();
+        $(".btn .btn-primary").hide();
+    }
+  }
+  );
+  // Add event listener to the login button

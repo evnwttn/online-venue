@@ -277,3 +277,36 @@ document.addEventListener("DOMContentLoaded", () => {
   populateCountrySelect("country", countries);
   logStoredUsers();
 });
+
+// ///////////////////////////
+// // Function to handle user login
+// // Function to check user credentials
+// function checkUser(ev) {
+//   ev.preventDefault();
+//   var status=false;
+
+//   var username = document.getElementById("username").value;
+//   var password = document.getElementById("password").value;
+
+
+//   for(var i=0;i<userList.length;i++) {
+//     var u=userList[i];
+//     console.log(u.username);
+//     console.log(u.password);
+//     if (u.username==username && u.password==password){
+//     status=true;
+//     localStorage.setItem("currentUser", JSON.stringify(u));
+//     //store whole data of logged user
+//     currentUser=userList[i];
+//     break;
+//     }
+//   }
+
+//   if (status==true){
+//     location.href="index.html";
+//   }
+//   else {
+//     alert("Invalid username or password.");
+//   }
+// }
+// // Function to handle form submission
