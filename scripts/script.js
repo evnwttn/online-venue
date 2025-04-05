@@ -77,6 +77,8 @@ const handleFormSubmit = (e) => {
   userForm.reset();
   //This triggers showing the "Submit Property" button
   window.onUserLogin(userData);
+  //close the dialog after sign-up
+  showLoginDialog(false);
 };
 
 // Function to check user credentials (login)
@@ -102,6 +104,8 @@ const handleLogin = (e) => {
     console.log("Signed in user:", user);
     //it cause "submit property" button to show after a user login
     window.onUserLogin(user);
+    //close the dialog after login
+    showLoginDialog(false);
   } else {
     alert("Invalid email or password.");
   }
