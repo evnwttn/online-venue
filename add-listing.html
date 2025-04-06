@@ -108,7 +108,7 @@
               <div class="input-group">
                   <select id="category" name="category">
                       <option value="hourly">Hourly</option>
-                      <option value="daily">Daily</option>
+                      <!-- <option value="daily">Daily</option> -->
                       <option value="weekly">Weekly</option>
                   </select>
                   
@@ -181,14 +181,14 @@
               <label for="price-per-hour">Price per hour (only numbers)</label>
               <input type="number" id="price-per-hour" name="price-per-hour" placeholder="Enter price">
           </div>
-          <div class="flex-group">
-              <label for="before-label">Before Label</label>
+          <!-- <div class="flex-group">
+              <label for="before-label">When Available</label>
               <input type="text" id="before-label" name="before-label" placeholder="Enter label">
           </div>
           <div class="flex-group">
-              <label for="after-label">After Label</label>
+              <label for="after-label">When Booked</label>
               <input type="text" id="after-label" name="after-label" placeholder="Enter label">
-          </div>
+          </div> -->
       </div>
 
       <!-- Taxes and Fees Section -->
@@ -203,8 +203,8 @@
               <input type="number" id="cleaning-fee" name="cleaning-fee" placeholder="Enter cleaning fee">
           </div>
           <div class="flex-group">
-              <label for="minimum-hours">Minimum hours of booking</label>
-              <input type="number" id="minimum-hours" name="minimum-hours" placeholder="Enter minimum hours">
+              <!-- <label for="minimum-hours">Minimum hours of booking</label>
+              <input type="number" id="minimum-hours" name="minimum-hours" placeholder="Enter minimum hours"> -->
           </div>
           <div class="flex-group">
               <label for="security-deposit">Security Deposit in $</label>
@@ -253,12 +253,12 @@
             
         </div>
         
-        <div class="media-upload-area">
+        <!-- <div class="media-upload-area">
             <p>Drag and Drop Images or</p>
             <p>Select Media</p>
             <label for="images">Images</label>
       <input type="file" id="images" name="images" required /> 
-        </div>
+        </div> -->
         
         <div class="input-section">
             <label for="youtube-video" class="input-label">Video from YouTube/Vimeo</label>
@@ -293,9 +293,9 @@
         <!-- <label for="details">Details</label> -->
         <p>Size in ft2</p>
        <textarea id="size" name="size" required></textarea>
-       <p>Rooms Number</p>
+       <p>Number of Rooms</p>
         <textarea id="capacity" name="capacity" placeholder="capacity" required></textarea>
-       <p>Bathroom</p>
+       <p>Number of Bathroom</p>
         <textarea id="bathroom" name="bathroom" placeholder="bathroom" required></textarea>
       <p>Good for Individual Work</p>
       <select id="individual-worker" name="individual-worker" required>
@@ -356,7 +356,7 @@
       <div class="flex-group">
       <label for="zip">Zip</label>
       <input type="text" id="zip" name="zip" required />
-      <label for="state">State</label>
+      <label for="state">Province</label>
       <input type="text" id="state" name="state" required />
       <label for="country">Country</label>
       <input type="text" id="country" name="country" required />
