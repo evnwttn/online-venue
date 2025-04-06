@@ -338,10 +338,10 @@ dialog {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
+    /* align-items: center; */
+    gap: 20px;
     padding-top: 20px;
-    border: 1px solid #100404;
+    /* border: 0px solid #100404; */
     border-radius: 10px;
     margin: 30px 30px 30px ; 
     background-color: #ffffff;
@@ -349,6 +349,7 @@ dialog {
     width: 400px;
     height: 200px;
     text-align: left;
+    /* text-align: center; */
     font-size: 16px;
     font-weight: 500;
     transition: background-color 0.3s ease; 
@@ -357,9 +358,9 @@ dialog {
 .box-box2 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    /* justify-content: center; */
+    align-items: space-around;
+    gap: 20px;
     padding-top: 20px;
     border: 1px solid #100404;
     border-radius: 10px;
@@ -371,4 +372,16 @@ dialog {
     text-align: center;
     font-size: 16px;
     font-weight: 500;
+}
+.box-box2-1 {
+
+display: flex;
+margin-top: 5px;
+padding: 20px ;
+align-items: space-around;
+gap: 20px;
+
+
+
+
 }
