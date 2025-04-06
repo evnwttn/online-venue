@@ -1,3 +1,32 @@
+let activeUser = null; // Variable to store the currently logged-in user
+
+window.onUserLogin = function (user) {
+  localStorage.setItem("currentUser", JSON.stringify(user)); 
+  activeUser = user; 
+  updateUI(); 
+  dialog.close(); 
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const storedUser = localStorage.getItem("currentUser");
+  if (storedUser) {
+    activeUser = JSON.parse(storedUser);
+    updateUI();
+  }
+
+  populateCountrySelect("country", countries);
+  logStoredUsers();
+});
+
+function updateUI() {
+  const submitBtn = document.getElementById("submitBtn");
+  if (activeUser && submitBtn) {
+    submitBtn.style.display = "block";
+  }
+}
+
+
+/////////
 const dialog = document.getElementById("lgn");
 const wrapper = document.querySelector(".wrapper");
 const userForm = document.getElementById("userForm");
@@ -104,6 +133,7 @@ const handleLogin = (e) => {
     console.log("Signed in user:", user);
     //it cause "submit property" button to show after a user login
     window.onUserLogin(user);
+    
     //close the dialog after login
     showLoginDialog(false);
   } else {
