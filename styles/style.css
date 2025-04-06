@@ -319,3 +319,56 @@ dialog {
     font-weight: 500;
     transition: text-decoration 0.3s ease;
 }
+
+.contactbox{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 20px 20px auto auto;
+    /* border: 1px solid #ca4f4f;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px 20px auto auto;
+    margin: 30px 30px 30px ;
+}    */
+
+.box-box1 {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+    border: 1px solid #100404;
+    border-radius: 10px;
+    margin: 30px 30px 30px ; 
+    background-color: #ffffff;
+    color: #000000;
+    width: 400px;
+    height: 200px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease; 
+}
+
+.box-box2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+    border: 1px solid #100404;
+    border-radius: 10px;
+    margin: 30px 10px 10px 10px ; 
+    background-color: #ffffff;
+    color: #000000;
+    width: 600px;
+    height: 200px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
