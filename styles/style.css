@@ -343,7 +343,7 @@ dialog {
     padding-top: 20px;
     /* border: 0px solid #100404; */
     border-radius: 10px;
-    margin: 30px 30px 30px ; 
+    margin: 30px 30px 30px auto ; 
     background-color: #ffffff;
     color: #000000;
     width: 400px;
@@ -361,10 +361,10 @@ dialog {
     /* justify-content: center; */
     align-items: space-around;
     gap: 20px;
-    padding-top: 20px;
-    border: 1px solid #100404;
+    padding-top: auto;
+    border: 0px solid #100404;
     border-radius: 10px;
-    margin: 30px 10px 10px 10px ; 
+    margin: 5px 10px 10px auto; 
     background-color: #ffffff;
     color: #000000;
     width: 600px;
@@ -381,7 +381,40 @@ padding: 20px ;
 align-items: space-around;
 gap: 20px;
 
+}
+
+.box-box2-2 #message{
+   
+    margin: 5px auto auto auto;
+    padding: 20px ;
+    align-items: space-around;
+    gap: 20px;
+    width: 90%;
+    border-radius: 10px;
+    background-color: #ffffff;
+ 
+    height: 100%;
+}
 
 
+.box-box2-2 button {
+    background-color: #57bec3;
+    color: #ffffff;
+    border-radius: 10px;
+    /* align-items: left; */
+    padding: 10px 40px;
+    /* gap: 20px; */
+   
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
 
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
 }
