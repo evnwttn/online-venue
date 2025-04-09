@@ -61,9 +61,15 @@ PreviousBtn.addEventListener("click", () => {
   updateFormVisibility(); // Update form and progress bar
 });
 
-finishBtn.addEventListener("click", () => {
-  location.reload(); // Reload the page to reset the form
-});
+// finishBtn.addEventListener("click", () => {
+  function sConsole(event) {
+  event.preventDefault();
+  var data = document.getElementById("title, category, room_type, guest_no, city, neighborhood, property_description, booking_type, price_per_hour, before_label, after_label, taxes, cleaning_fee, minimum_hours, security_deposit, early_bird_discount");
+  console.log(title.value);
+  
+// }
+  // location.reload(); // Reload the page to reset the form
+  }
 
 
 const { Calendar } = window.VanillaCalendarPro;
@@ -82,3 +88,4 @@ const options = {
 const calendar = new Calendar("#calendar", options);
 
 calendar.init();
+
