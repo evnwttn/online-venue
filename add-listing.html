@@ -93,7 +93,7 @@
     <div class="page page1">
       
       <div class="main form">
-      <form class="form" action="" id="form" onsubmit="sConsole(event)" >
+      <form class="form" id="form" onsubmit="submitForm(event)" > 
         
         <h2>Step 1: Informatiom</h2>
         <form>
@@ -488,7 +488,7 @@
     
     <button id="PreviousBtn" disabled>Previous</button>
     <button id="NextBtn">Next</button>
-    <button id="finishBtn" type="submit" onClick="sConsole()">Finish</button>
+    <button id="finishBtn" onClick="submitForm()">Finish</button>
 </div>  
 <footer>
   <div class="footer">
@@ -514,9 +514,9 @@
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@3.0.3/index.min.js"></script>
     <script src="scripts/header.js"></script>
+    <script src="scripts/validation.js"></script>
     <script src="scripts/add-listing.js"></script>
     <script src="scripts/script.js"></script>
-    <script src="scripts/validation.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="scripts/detail-step4.js"></script>
 
