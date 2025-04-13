@@ -27,7 +27,6 @@ function updateUI() {
 }
 
 
-/////////
 const dialog = document.getElementById("lgn");
 const wrapper = document.querySelector(".wrapper");
 const userForm = document.getElementById("userForm");
