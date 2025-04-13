@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
           <button id="submitPropertyBtn" style="background-color: #57bec3; display: none;" class="btn btn-primary">
             <a href="add-listing.html">Submit Property</a>
           </button>
+          <button class="login" id="logoutbtn" type="submit" onclick="showLoginDialog(false, 'signout')">
+            Logout
+          </button>
         </div>
       </nav>
       <h1 class="main-name main-name-large">Online Venue Booking</h1>
