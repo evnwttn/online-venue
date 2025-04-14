@@ -1,6 +1,6 @@
 # 🏠 Online Venue Booking
 
-##About Us
+## About Us
 Welcome to our online venue booking platform—your go-to solution for finding the perfect space for unforgettable events!
 
 Phase 1 Focus: Birthday Celebrations!
