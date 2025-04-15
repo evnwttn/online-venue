@@ -1,4 +1,3 @@
-document.getElementById("logoutbtn").hidden=""; // Hide the logout button initially
 let activeUser = null; // Variable to store the currently logged-in user
 
 window.onUserLogin = function (user) {
@@ -33,11 +32,14 @@ const userForm = document.getElementById("userForm");
 const loginForm = document.getElementById("loginForm");
 
 // Function to show/hide the login dialog and toggle between forms
+
 const showLoginDialog = (show, formType = 'signup') => {
   const signupForm = document.getElementById("signupForm");
   const signinForm = document.getElementById("signinForm");
 
   if (show) {
+    console.log("Dialog element:", dialog);
+
     dialog.showModal();
     if (formType === 'signup') {
       signupForm.style.display = 'block';

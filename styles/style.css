@@ -136,7 +136,7 @@ html, body {
     justify-content: center;
     align-items: center;
     height: 750px;
-    background-color: #e7eaed;
+    /* background-color: #e7eaed; */
     padding: 20px;
     text-align: center;
 }
@@ -166,6 +166,13 @@ html, body {
     border-radius: 5px;
     width: 300px;
     font-size: 16px;
+}
+.searchhead {
+    
+    color: rgb(249, 249, 248);
+}
+.mainsearch p {
+    color: rgb(249, 249, 248);
 }
 
 /* Dialog (Sign Up / Sign In Forms) */
@@ -272,6 +279,7 @@ dialog {
 
     .mainsearch h2 {
         font-size: 24px;
+        color: rgb(255, 255, 255);
     }
 
     .searchsider input {

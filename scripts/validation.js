@@ -38,8 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       guest_no: document.getElementById("guest_no").value,
       city: document.getElementById("city").value,
       neighborhood: document.getElementById("neighborhood").value,
-      property_description: document.getElementById("property_description")
-        .value,
+      property_description: document.getElementById("property_description").value,
       booking_type: document.getElementById("booking-type").value,
       price_per_hour: document.getElementById("price-per-hour").value,
       taxes: document.getElementById("taxes").value,
