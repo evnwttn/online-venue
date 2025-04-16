@@ -19,15 +19,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function updateUI() {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
   const submitBtn = document.getElementById("submitBtn");
   const loginBtn = document.getElementById("logbtn"); // Get the login button
+  const greeting = document.getElementById("greeting");
 
   if (activeUser) {
     if (submitBtn) submitBtn.style.display = "block";
     if (loginBtn) loginBtn.style.display = "none";  // 🔥 Hides the login button
+    if (greeting) {
+      greeting.style.display = "inline-block";
+      greeting.textContent = ` ${currentUser.name || currentUser.email || "User"} `;
+    }
   } else {
     if (submitBtn) submitBtn.style.display = "none";
-    if (loginBtn) loginBtn.style.display = "inline-block"; // Shows it if not logged in
+    if (loginBtn) loginBtn.style.display = "inline-block";
+    if (greeting) greeting.style.display = "none";
   }
 }
 

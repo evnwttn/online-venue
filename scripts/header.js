@@ -11,12 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="header-buttons">
-          <button class="login" id="logbtn" type="submit" onclick="showLoginDialog(true, 'signup')">
+          <div id="loginContainer">
+          <button class="login" id="logbtn" type="button" onclick="showLoginDialog(true, 'signup')">
             Login / Sign Up
           </button>
+          <span id="greeting" style="display: none; color: black; font-weight: bold;"></span>
+        </div>
           <button id="submitPropertyBtn" style="background-color: #57bec3; display: none;" class="btn btn-primary">
             <a href="add-listing.html">Submit Property</a>
           </button>
+</div>
         </div>
       </nav>
       <h1 class="main-name main-name-large">Online Venue Booking</h1>
@@ -26,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to update UI
   function updateUI() {
       const loginBtn = document.getElementById("logbtn");
-    
       var currentUser = localStorage.getItem("currentUser");
       var submitBtn = document.getElementById("submitPropertyBtn");
 
