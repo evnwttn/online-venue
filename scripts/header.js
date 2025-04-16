@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Inject header HTML
   document.getElementById("header-container").innerHTML = `
-    <header class="mainheader">
+    
+  <header class="mainheader">
       <nav class="nav main-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -21,14 +22,18 @@ document.addEventListener("DOMContentLoaded", function () {
       <h1 class="main-name main-name-large">Online Venue Booking</h1>
     </header>
   `;
-
+  updateUI(); 
   // Function to update UI
   function updateUI() {
+      const loginBtn = document.getElementById("logbtn");
+    
       var currentUser = localStorage.getItem("currentUser");
       var submitBtn = document.getElementById("submitPropertyBtn");
 
       if (currentUser) {
           submitBtn.style.display = "inline-block"; // Show button if user is logged in
+          if (loginBtn) loginBtn.style.display = "none";
+
       } else {
           submitBtn.style.display = "none"; // Hide button if not logged in
       }

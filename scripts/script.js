@@ -20,10 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function updateUI() {
   const submitBtn = document.getElementById("submitBtn");
-  if (activeUser && submitBtn) {
-    submitBtn.style.display = "block";
+  const loginBtn = document.getElementById("logbtn"); // Get the login button
+
+  if (activeUser) {
+    if (submitBtn) submitBtn.style.display = "block";
+    if (loginBtn) loginBtn.style.display = "none";  // 🔥 Hides the login button
+  } else {
+    if (submitBtn) submitBtn.style.display = "none";
+    if (loginBtn) loginBtn.style.display = "inline-block"; // Shows it if not logged in
   }
 }
+
 
 
 const dialog = document.getElementById("lgn");
